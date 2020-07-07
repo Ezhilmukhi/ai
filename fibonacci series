@@ -29,14 +29,3 @@ Fibonacci series:
 34
 
 
-2.TO FIND AND PRINT THE POSITIVE INTEGERS IN LIST(LOOPING IN LISTS)
-
-l=[1,-22,77,-24,11]
-for i in (l):
-    if(i>0):
-        print(i)
-        
-OUTPUT:
-1
-77
-11
