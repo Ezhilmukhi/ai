@@ -1,0 +1,62 @@
+#LISTS
+l=[1,2,3,4]
+l1=[5,6,7,8]
+l1.extend([9,10])                                              #extending the elements of l1
+print("l1 after extending is:",l1)
+l2=l+l1                                                        #joining two lists and storing in another variable
+print("The list after joining is:",l2)
+
+#TUPLES
+t=('a','b','c',('top','bottom'),'d') 
+print("accessing elements using index:",t[3])                   #accessing elements in tuple using index
+print("slicing in tuples:",t[2:4])                              #slicing in tuples
+print("slicing in tuples using negative index:",t[:-1])         #slicing using negative index
+
+
+#DICTIONARY
+dict={'apple':2,'orange':4,'banana':7,'strawberry':12}
+print("accessing elements in dictionary:",dict['strawberry'])   #accessing elements in dictionary
+dict['jackfruit']='9'                                           #adding elements in dictionary
+print(dict)
+for key in dict:                                                #iterating in dictionary
+    print(key)
+del dict['apple']
+print("Dictionary after deletion is:",dict)                     #dictionary after deletion
+
+#SET
+var={'a','b','c','d'}
+type(var)                                                       #to print the type of the variable(i.e..var)
+var.add('e')                                                    #adding elements in set
+print("set after adding an element is:",var)
+var.remove('a')                                                 #removing elements from set
+print("set after removing an element is:",var)
+var1={'e','f','g'}
+var2=var&var1                                                   #intersection in set
+print("the common element in both the set is:",var2)                                                     
+var3=var.union(var1)                                            #union in set
+print("set after union is:",var3)
+list1=list(var3)                                                #converting set into a list
+print("the coverted list is:",list1)                            
+'d' in var                                                      #checking whether a given elements in a set
+
+
+OUTPUT:
+l1 after extending is: [5, 6, 7, 8, 9, 10]
+The list after joining is: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+accessing elements using index: ('top', 'bottom')
+slicing in tuples: ('c', ('top', 'bottom'))
+slicing in tuples using negative index: ('a', 'b', 'c', ('top', 'bottom'))
+accessing elements in dictionary: 12
+{'apple': 2, 'orange': 4, 'banana': 7, 'strawberry': 12, 'jackfruit': '9'}
+apple
+orange
+banana
+strawberry
+jackfruit
+Dictionary after deletion is: {'orange': 4, 'banana': 7, 'strawberry': 12, 'jackfruit': '9'}
+set after adding an element is: {'b', 'a', 'd', 'e', 'c'}
+set after removing an element is: {'b', 'd', 'e', 'c'}
+the common element in both the set is: {'e'}
+set after union is: {'b', 'd', 'e', 'g', 'f', 'c'}
+the coverted list is: ['b', 'd', 'e', 'g', 'f', 'c']
+True
